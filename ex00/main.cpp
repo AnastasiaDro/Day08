@@ -12,8 +12,8 @@ int main() {
 		vect.push_back(i);
 		list.push_back(i + 1);
 	}
-	std::vector<int>::const_iterator vectPos = easyfind(vect, 2);
-	std::list<int>::const_iterator listPos = easyfind(list, 2);
+	std::vector<int>::iterator vectPos = easyfind(vect, 2);
+	std::list<int>::iterator listPos = easyfind(list, 2);
 	std::cout << *vectPos << std::endl;
 	std::cout << *listPos << std::endl;
 
