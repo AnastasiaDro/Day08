@@ -6,7 +6,7 @@
 #define EASYFIND_HPP
 
 template<typename T>
-typename T::iterator easyfind(T t, int i)
+typename T::const_iterator easyfind(T t, int i)
 {
 	typename T::iterator it;
 
