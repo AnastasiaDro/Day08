@@ -1,15 +1,20 @@
 #include <iostream>
 #include <vector>
+#include <list>
 #include "easyfind.hpp"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
 	std::vector<int> vect;
 
+	std::list<int> list;
 	vect.reserve(10);
-for (int i = 0; i < 5; ++i) {
+	for (int i = 0; i < 5; ++i) {
 		vect.push_back(i);
+		list.push_back(i + 1);
 	}
-	int find = easyfind(vect, 2);
+	std::vector<int>::iterator vectPos = easyfind(vect, 2);
+	//std::list<int>::iterator listPos = easyfind(list, 2);
+	std::cout << *vectPos << std::endl;
+	//std::cout << *(listPos.operator->()) << std::endl;
 	return 0;
 }

@@ -6,13 +6,14 @@
 #define EASYFIND_HPP
 
 template<typename T>
-bool &easyfind(T t, int i) const
+typename T::iterator easyfind(T t, int i)
 {
-	T<int>::iterator it;
+	typename T::iterator it;
+
 	it = find(t.begin(), t.end(), i);
-	if (t.end != i && it == t.end)
-		return -1;
-	return it;
+	if (*t.end() != i && it == t.end())
+		throw std::range_error("Number not found");
+	return (it);
 }
 
 #endif //DAY08_EASYFIND_HPP
