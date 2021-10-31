@@ -13,9 +13,21 @@ int main() {
 		list.push_back(i + 1);
 	}
 	std::vector<int>::iterator vectPos = easyfind(vect, 2);
-	std::list<int>::iterator listPos = easyfind(list, 2);
 	std::cout << *vectPos << std::endl;
+	std::list<int>::iterator listPos = easyfind(list, 2);
 	std::cout << *listPos << std::endl;
+
+	try {
+		std::vector<int>::iterator vectErr = easyfind(vect, 6); // 0 - 4
+	} catch (std::range_error &e) {
+		std::cout << "VECTOR: cannot find value!" << std::endl;
+	}
+
+	try {
+		std::list<int>::iterator listErr = easyfind(list, 6); // 1 - 5
+	} catch (std::range_error &e) {
+		std::cout << "LIST: cannot find value!" << std::endl;
+	}
 
 	return 0;
 }
