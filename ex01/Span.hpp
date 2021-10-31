@@ -14,15 +14,19 @@ private:
 	std::vector <int> vect;
 	Span();
 public:
-	Span(int N);
+	Span(unsigned int N);
 	Span(const Span &orig);
 	~Span();
 	Span &operator=(const Span &orig);
-
-
+	unsigned int getN() const;
 	void addNumber(int num);
 	int shortestSpan();
 	int longestSpan();
+	unsigned int getVectSize();
+
+	class TooSmallVectExeption : public std::exception {
+		virtual const char* what() const throw ();
+	};
 
 };
 
