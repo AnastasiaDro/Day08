@@ -1,7 +1,7 @@
-NAME = ex00
+NAME = ex01
 
-SRC = main.cpp
-HEAD = easyfind.hpp
+SRC = main.cpp Span.cpp
+HEAD = Span.hpp
 
 OBJS = $(SRC:.cpp=.o)
 
