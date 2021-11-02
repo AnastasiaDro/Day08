@@ -64,7 +64,7 @@ int main()
 	}
 	itSec = mSecStack.begin();
 
-	println("\nLets's check the list working");
+	println("\nLets's check the list work");
 	std::list<int> mList;
 	println("filling it");
 	while (itSec != itSecEnd)
