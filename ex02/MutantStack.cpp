@@ -17,4 +17,12 @@
 //
 //template<typename T, typename Cont>
 
+//template<typename T, typename Container>
+//MutantStack<T, Container> &MutantStack<T, Container>::operator=(const MutantStack &orig) {
+//	if (this == &orig)
+//			return *this;
+//	this->c = orig.c;
+//	return *this;
+//}
+
 
