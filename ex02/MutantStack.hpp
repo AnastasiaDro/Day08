@@ -7,6 +7,7 @@
 
 
 #include <stack>
+#include <iostream>
 
 template <typename T, typename Container = std::deque<T> >
 class MutantStack : public std::stack<T, Container>  {
@@ -37,17 +38,10 @@ public:
 	{
 		return std::stack<T>::c.end();
 	}
-
-
-
-//	MutantStack <T>&operator=(const MutantStack <T>&orig) {
-//		if (this == &orig)
-//			return *this;
-//		this->c = orig.c;
-//		return *this;
-//	}
 };
 
+void println(std::string str);
+void print(std::string str);
 
 
 
