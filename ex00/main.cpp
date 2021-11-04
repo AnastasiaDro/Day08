@@ -18,15 +18,15 @@ int main() {
 	std::cout << *listPos << std::endl;
 
 	try {
-		std::vector<int>::iterator vectErr = easyfind(vect, 6); // 0 - 4
+		easyfind(vect, 6); // 0 - 4
 	} catch (std::range_error &e) {
-		std::cout << "VECTOR: cannot find value!" << std::endl;
+		std::cout << "VECTOR: cannot find the value!" << std::endl;
 	}
 
 	try {
-		std::list<int>::iterator listErr = easyfind(list, 6); // 1 - 5
+		easyfind(list, 6); // 1 - 5
 	} catch (std::range_error &e) {
-		std::cout << "LIST: cannot find value!" << std::endl;
+		std::cout << "LIST: cannot find the value!" << std::endl;
 	}
 
 	return 0;
