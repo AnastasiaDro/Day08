@@ -13,11 +13,9 @@ template <typename T, typename Container = std::deque<T> >
 class MutantStack : public std::stack<T, Container>  {
 public:
 	MutantStack() : std::stack<T>() {}
-
+	MutantStack(const MutantStack &orig) : std::stack<T, Container>(orig) { this->c = orig.c; }
 	~MutantStack() {}
-	MutantStack(const MutantStack &orig) : std::stack<T, Container>(orig) {
-		this->c = orig.c;
-	}
+
 	MutantStack &operator=(const MutantStack &orig)
 	{
 		if (this == &orig)
