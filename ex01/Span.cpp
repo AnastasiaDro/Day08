@@ -2,6 +2,7 @@
 // Created by  Anastasia on 31.10.2021.
 //
 
+#include <iostream>
 #include "Span.hpp"
 
 Span::Span() {}
@@ -11,6 +12,8 @@ Span::Span(unsigned int N) : n(N) {}
 Span::Span(const Span &orig) {
 	*this = orig;
 }
+
+Span::~Span() {}
 
 Span &Span::operator=(const Span &orig) {
 	if(this == &orig)
@@ -46,14 +49,17 @@ int Span::longestSpan() {
 	return (res);
 }
 
-Span::~Span() {}
-
 unsigned int Span::getN() const {
 	return n;
 }
 
 unsigned int Span::getVectSize() {
 	return this->vect.size();
+}
+
+void Span::addNumberS(Iterator start, Iterator end) {
+	for (Iterator it = start; it !=end; ++it)
+		this->vect.push_back(*it);
 }
 
 

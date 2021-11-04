@@ -9,9 +9,17 @@ int main() {
 	Span sp = Span(5);
 	sp.addNumber(5);
 	sp.addNumber(3);
-	sp.addNumber(17);
-	sp.addNumber(9);
-	sp.addNumber(11);
+//	sp.addNumber(17);
+//	sp.addNumber(9);
+//	sp.addNumber(11);
+
+	//Adding values by itertors
+	std::vector<int> vect;
+	vect.push_back(17);
+	vect.push_back(9);
+	vect.push_back(11);
+	//multiple adding method
+	sp.addNumberS(vect.begin(), vect.end());
 	std::cout << "shortest: " << sp.shortestSpan() << std::endl;
 	std::cout << "longest: " << sp.longestSpan() << std::endl;
 
@@ -44,7 +52,5 @@ int main() {
 	} catch (Span::TooSmallVectExeption &e) {
 		std::cout << "TooSmallVectExeption catched" << std::endl;
 	}
-
-
 	return 0;
 }

@@ -26,8 +26,6 @@ public:
 		return *this;
 	}
 
-
-
 	typedef typename std::stack<T>::container_type::iterator iterator;
 
 	iterator begin(void)
@@ -45,4 +43,4 @@ void print(std::string str);
 
 
 
-#endif //DAY08_MUTANTSTACK_HPP
+#endif //MUTANTSTACK_HPP

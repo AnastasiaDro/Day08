@@ -20,6 +20,8 @@ public:
 	Span &operator=(const Span &orig);
 	unsigned int getN() const;
 	void addNumber(int num);
+	typedef std::vector<int>::iterator Iterator;
+	void addNumberS(Iterator start, Iterator end);
 	int shortestSpan();
 	int longestSpan();
 	unsigned int getVectSize();
